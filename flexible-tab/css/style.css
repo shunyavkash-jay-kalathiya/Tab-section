@@ -79,7 +79,7 @@ h6 {
   opacity: 0;
 }
 
-/* @keyframes tab-animatio {
+@keyframes tab-animatio {
   0% {
     width: 0%;
   }
@@ -94,7 +94,7 @@ h6 {
   100% {
     width: 100%;
   }
-} */
+}
 
 .flexible-tab-content-wrapper {
   display: none;
