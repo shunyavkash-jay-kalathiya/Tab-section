@@ -2,146 +2,249 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tab</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Geist:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Geist:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-
-    <div class="flexible-tab-section">
-        <div class="flexible-tab-wrapper">
-            <ul class="flexible-tab">
-                <li class="flexible-tab-item current" data-tab="tab-1">Online Courses</li>
-                <li class="flexible-tab-item" data-tab="tab-2">Physical Goods</li>
-                <li class="flexible-tab-item" data-tab="tab-3">Digital Downloads</li>
-                <li class="flexible-tab-item" data-tab="tab-4">SaaS Product</li>
-                <li class="flexible-tab-item" data-tab="tab-5">Software Sellers</li>
-            </ul>
+<div class="flexible-tab-section">
+    <div class="flexible-tab-wrapper">
+        <ul class="flexible-tab">
+            <li class="flexible-tab-item current" data-tab="tab-1">Online Courses</li>
+            <li class="flexible-tab-item" data-tab="tab-2">Physical Goods</li>
+            <li class="flexible-tab-item" data-tab="tab-3">Digital Downloads</li>
+            <li class="flexible-tab-item" data-tab="tab-4">SaaS Product</li>
+            <li class="flexible-tab-item" data-tab="tab-5">Software Sellers</li>
+        </ul>
+    </div>
+    <!-- flexible-tab-column-reverse -->
+    <div class="container">
+        <div data-tab-content="tab-1" class="flexible-tab-content-wrapper current" >
+            <div class="flexible-tab-content-item ">
+                <div class="flexible-tab-content-left" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
+                    <h2 class="flexible-tab-title">Turn Lessons Into Livelihood.</h2>
+                    <div class="richtext flexible-tab-desc">
+                        <p>SureCart helps course sellers boost enrolments with flexible payment plans, upsells and bundles – basically everything that LMS left out. Plus, deep integration with top LMS like LearnDash, LiferLMS, TutorLMS and more.</p>
+                    </div>
+                    <!-- <ul>
+                        <li class="flexible-tab-service">
+                            <div class="flexible-tab-service-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                                    <g>
+                                        <path d="M366 396c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10z" fill="currentColor" opacity="1" data-original="#000000" class=""></path>
+                                        <path d="m390.622 363.663-47.53-15.84-17.063-34.127c15.372-15.646 26.045-36.348 29.644-57.941L357.801 243H376c16.542 0 30-13.458 30-30v-63C406 67.29 338.71 0 256 0c-82.922 0-150 67.097-150 150v63c0 13.036 8.361 24.152 20 28.28V253c0 16.542 13.458 30 30 30h8.782a108.487 108.487 0 0 0 16.774 25.974 103.947 103.947 0 0 0 4.406 4.741l-17.054 34.108-47.531 15.841C66.112 382.092 26 440.271 26 502c0 5.523 4.477 10 10 10h440c5.522 0 10-4.477 10-10 0-61.729-40.111-119.908-95.378-138.337zM386 213c0 5.514-4.486 10-10 10h-15.262c2.542-19.69 4.236-40.643 4.917-61.28.02-.582.036-1.148.054-1.72H386v53zm-250 10c-5.514 0-10-4.486-10-10v-53h20.298c.033 1.043.068 2.091.107 3.146l.004.107v.009c.7 20.072 2.372 40.481 4.856 59.737H136V223zm20 40c-5.514 0-10-4.486-10-10v-10h8.198l2.128 12.759a105.57 105.57 0 0 0 1.482 7.241H156zm-9.983-123H126.38C131.445 72.979 187.377 20 256 20c68.318 0 124.496 52.972 129.619 120h-19.635c-.72-55.227-45.693-100-101.033-100h-17.9c-55.339 0-100.315 44.773-101.034 100zM247.05 60h17.9c44.809 0 81.076 36.651 81.05 81.41 0 3.147-.025 5.887-.078 8.38l-.001.098-12.508-1.787c-33.98-4.852-66.064-20.894-90.342-45.172A10.003 10.003 0 0 0 236 100c-26.856 0-52.564 12.236-69.558 32.908C170.63 92.189 205.053 60 247.05 60zm-68.51 203c-5.006-16.653-10.734-65.653-12-97.053l13.459-17.946c12.361-16.476 31.592-26.713 52.049-27.888 26.917 25.616 61.739 42.532 98.537 47.786l14.722 2.104c-.984 20.885-2.995 41.843-5.876 61.118l-.003.02c-.916 6.197-1.638 10.185-3.482 21.324-5.296 31.765-28.998 60.49-60.287 68.313a81.338 81.338 0 0 1-39.313 0c-19.537-4.884-37.451-18.402-49.012-37.778h20.386c4.128 11.639 15.243 20 28.28 20h20c16.575 0 30-13.424 30-30 0-16.542-13.458-30-30-30h-20c-13.327 0-24.278 8.608-28.297 20H178.54zm56.619 78.016A101.171 101.171 0 0 0 256 343.2c5.471 0 10.943-.458 16.353-1.346l-17.67 18.687-19.524-19.525zm5.776 34.063-31.718 33.542a381.013 381.013 0 0 1-22.389-51.917l11.911-23.822 42.196 42.197zm70.631-45.585 13.604 27.209a380.908 380.908 0 0 1-22.392 51.933l-33.948-33.948 42.736-45.194zM226 273c0-5.521 4.478-10 10-10h20c5.514 0 10 4.486 10 10 0 5.522-4.479 10-10 10h-20c-5.514 0-10-4.486-10-10zM46.4 492c3.963-49.539 36.932-94.567 81.302-109.363l42.094-14.028a400.869 400.869 0 0 0 28.463 61.74l.056.101.001.002a400.974 400.974 0 0 0 27.372 41.799L237.99 492H46.4zm209.6-8.914-13.562-21.773a10.133 10.133 0 0 0-.486-.711 381.284 381.284 0 0 1-22.532-33.662l35.663-37.714 37.578 37.578A380.863 380.863 0 0 1 270.05 460.6c-.49.653.205-.376-14.05 22.486zM274.01 492l12.301-19.748a400.826 400.826 0 0 0 27.564-42.132c.05-.088.097-.178.147-.266l.018-.032a400.543 400.543 0 0 0 28.164-61.213l42.093 14.028c44.371 14.796 77.34 59.824 81.303 109.363H274.01z" fill="currentColor" opacity="1" data-original="#000000" class=""></path>
+                                        <path d="M435.546 451.531c-6.683-13.377-16.472-25.261-28.309-34.367-4.378-3.369-10.656-2.55-14.023 1.828-3.368 4.378-2.549 10.656 1.828 14.024 9.454 7.273 17.272 16.766 22.611 27.453 2.473 4.949 8.483 6.941 13.415 4.477 4.94-2.468 6.945-8.474 4.478-13.415z" fill="currentColor
+                                        " opacity="1" data-original="#000000" class=""></path>
+                                    </g>
+                                </svg>
+                            </div>
+                            <h4 class="flexible-tab-service-title">Add Service </h4>
+                        </li>
+                    </ul> -->
+                    <a href="javascript:void(0);" class="flexible-btn-primary">Start selling today</a>
+                </div>
+                <div class="flexible-tab-content-right" data-aos="zoom-in-up" data-aos-easing="linear"  data-aos-duration="500">
+                    <div class="flexible-tab-content-img">
+                        <video controls=""  width="320">
+                            <source src="./images/demo-video.mp4" type="video/mp4" />
+                            Sample Video
+                        </video>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- flexible-tab-column-reverse -->
-        <div class="container">
-            <div id="tab-1" class="flexible-tab-content-wrapper current">
-                <div class="flexible-tab-content-item ">
-                    <div class="flexible-tab-content-left">
-                        <h2 class="flexible-tab-title">Turn Lessons Into Livelihood.</h2>
-                        <div class="richtext flexible-tab-desc">
-                            <p>SureCart helps course sellers boost enrolments with flexible payment plans, upsells and bundles – basically everything that LMS left out. Plus, deep integration with top LMS like LearnDash, LiferLMS, TutorLMS and more.</p>
-                        </div>
-                        <a href="javascript:void(0);" class="flexible-btn-primary">Start selling today</a>
+        <div data-tab-content="tab-2" class="flexible-tab-content-wrapper" >
+            <div class="flexible-tab-content-item">
+                <div class="flexible-tab-content-left"  data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
+                    <h2 class="flexible-tab-title">No More Plugin Bloat.Just a Store That Works.</h2>
+                    <div class="richtext flexible-tab-desc">
+                        <p>SureCart replaces the stack of plugins with built-in tools for shipping, upselling, and managing orders — so your store runs faster, cleaner, and without surprises</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem necessitatibus quod facere illo quasi labore commodi natus ab? A consequuntur omnis quo reiciendis pariatur eveniet illo neque nostrum repellendus</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem necessitatibus quod facere illo quasi labore commodi natus ab? A consequuntur omnis quo reiciendis pariatur eveniet illo neque nostrum repellendus </li>
+                        </ul>
                     </div>
-                    <div class="flexible-tab-content-right">
-                        <div class="flexible-tab-content-img">
-                            <img src="./images/img01.png" height="644" width="935"  alt="img01">
-                        </div>
+                    <a href="javascript:void(0);" class="flexible-btn-primary">Start selling today</a>
+                </div>
+                <div class="flexible-tab-content-right" data-aos="zoom-in-up" data-aos-easing="linear"  data-aos-duration="500">
+                    <div class="flexible-tab-content-img">
+                        <video controls autoplay loop width="1920" height="20080">
+                            <source src="./images/demo-2.mp4" type="video/mp4" />
+                            Sample Video
+                        </video>
                     </div>
                 </div>
             </div>
-            <div id="tab-2" class="flexible-tab-content-wrapper ">
-                <div class="flexible-tab-content-item">
-                    <div class="flexible-tab-content-left">
-                        <h2 class="flexible-tab-title">No More Plugin Bloat.Just a Store That Works.</h2>
-                        <div class="richtext flexible-tab-desc">
-                            <p>SureCart replaces the stack of plugins with built-in tools for shipping, upselling, and managing orders — so your store runs faster, cleaner, and without surprises</p>
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem necessitatibus quod facere illo quasi labore commodi natus ab? A consequuntur omnis quo reiciendis pariatur eveniet illo neque nostrum repellendus</li>
-                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem necessitatibus quod facere illo quasi labore commodi natus ab? A consequuntur omnis quo reiciendis pariatur eveniet illo neque nostrum repellendus </li>
-                            </ul>
-                        </div>
-                        <a href="javascript:void(0);" class="flexible-btn-primary">Start selling today</a>
+        </div>
+        <div data-tab-content="tab-3" class="flexible-tab-content-wrapper" >
+            <div class="flexible-tab-content-item">
+                <div class="flexible-tab-content-left" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
+                    <h2 class="flexible-tab-title">Skip the Gatekeepers. Launch Your Own Digital Store.</h2>
+                    <div class="richtext flexible-tab-desc">
+                        <p>SureCart gives you full control to sell your digital products directly from your own website. No more relying on platforms like Gumroad. Keep your brand front and center, and every dollar in your pocket.</p>
                     </div>
-                    <div class="flexible-tab-content-right">
-                        <div class="flexible-tab-content-img">
-                            <img src="./images/img02.png" height="644" width="935"  alt="img01">
-                        </div>
+                    <a href="javascript:void(0);" class="flexible-btn-primary">Start selling today</a>
+                </div>
+                <div class="flexible-tab-content-right" data-aos="zoom-in-up" data-aos-easing="linear"  data-aos-duration="500">
+                    <div class="flexible-tab-content-img">
+                        <img src="./images/img03.png" height="644" width="935" alt="img01">
                     </div>
                 </div>
             </div>
-            <div id="tab-3" class="flexible-tab-content-wrapper">
-                <div class="flexible-tab-content-item">
-                    <div class="flexible-tab-content-left">
-                        <h2 class="flexible-tab-title">Skip the Gatekeepers. Launch Your Own              Digital Store.</h2>
-                        <div class="richtext flexible-tab-desc">
-                            <p>SureCart gives you full control to sell your digital products directly from your own website. No more relying on platforms like Gumroad. Keep your brand front and center, and every dollar in your pocket.</p>
-                        </div>
-                        <a href="javascript:void(0);" class="flexible-btn-primary">Start selling today</a>
+        </div>
+        <div data-tab-content="tab-4" class="flexible-tab-content-wrapper">
+            <div class="flexible-tab-content-item">
+                <div class="flexible-tab-content-left"   data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
+                    <h2 class="flexible-tab-title">Turn Lessons Into Livelihood.</h2>
+                    <div class="richtext flexible-tab-desc">
+                        <p>SureCart helps course sellers boost enrolments with flexible payment plans, upsells and bundles – basically everything that LMS left out. Plus, deep integration with top LMS like LearnDash, LiferLMS, TutorLMS and more.</p>
                     </div>
-                    <div class="flexible-tab-content-right">
-                        <div class="flexible-tab-content-img">
-                            <img src="./images/img03.png" height="644" width="935" alt="img01">
-                        </div>
+                    <a href="javascript:void(0);" class="flexible-btn-primary">Start selling today</a>
+                </div>
+                <div class="flexible-tab-content-right"  data-aos="zoom-in-up" data-aos-easing="linear"  data-aos-duration="500">
+                    <div class="flexible-tab-content-img">
+                        <img src="./images/img04.png" height="644" width="935" alt="img01">
                     </div>
                 </div>
             </div>
-            <div id="tab-4" class="flexible-tab-content-wrapper">
-                <div class="flexible-tab-content-item">
-                    <div class="flexible-tab-content-left">
-                        <h2 class="flexible-tab-title">Turn Lessons Into Livelihood.</h2>
-                        <div class="richtext flexible-tab-desc">
-                            <p>SureCart helps course sellers boost enrolments with flexible payment plans, upsells and bundles – basically everything that LMS left out. Plus, deep integration with top LMS like LearnDash, LiferLMS, TutorLMS and more.</p>
-                        </div>
-                        <a href="javascript:void(0);" class="flexible-btn-primary">Start selling today</a>
+        </div>
+        <div data-tab-content="tab-5" class="flexible-tab-content-wrapper" >
+            <div class="flexible-tab-content-item">
+                <div class="flexible-tab-content-left"  data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
+                    <h2 class="flexible-tab-title">Zero-fuss Billing for Predictable MRR.</h2>
+                    <div class="richtext flexible-tab-desc">
+                        <p>Say goodbye to stacked billing plugins. SureCart simplifies recurring payments so SaaS products can scale easily — with analytics and automations built right in.</p>
                     </div>
-                    <div class="flexible-tab-content-right">
-                        <div class="flexible-tab-content-img">
-                            <img src="./images/img04.png" height="644" width="935"  alt="img01">
-                        </div>
-                    </div>
+                    <a href="javascript:void(0);" class="flexible-btn-primary">Start selling today</a>
                 </div>
-            </div>
-            <div id="tab-5" class="flexible-tab-content-wrapper">
-                <div class="flexible-tab-content-item">
-                    <div class="flexible-tab-content-left">
-                        <h2 class="flexible-tab-title">Zero-fuss Billing for Predictable MRR.</h2>
-                        <div class="richtext flexible-tab-desc">
-                            <p>Say goodbye to stacked billing plugins. SureCart simplifies recurring payments so SaaS products can scale easily — with analytics and automations built right in.</p>
-                        </div>
-                        <a href="javascript:void(0);" class="flexible-btn-primary">Start selling today</a>
-                    </div>
-                    <div class="flexible-tab-content-right">
-                        <div class="flexible-tab-content-img">
-                            <img src="./images/img05.png" height="644" width="935" alt="img01">
-                        </div>
+                <div class="flexible-tab-content-right" data-aos="zoom-in-up" data-aos-easing="linear"  data-aos-duration="500">
+                    <div class="flexible-tab-content-img">
+                        <img src="./images/img05.png" height="644" width="935" alt="img01">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    function updateContainerMarginRight() {
-        const container = document.querySelector('.container');
-        if (!container) return;
+AOS.init();
+</script>
+<script>
+function updateContainerMarginRight() {
+    const containers = document.querySelectorAll(".container");
 
-        const containerStyle = window.getComputedStyle(container);
-        const marginRightValue = containerStyle.getPropertyValue("margin-right");
+    containers.forEach(container => {
+        const marginRightValue = window.getComputedStyle(container).getPropertyValue("margin-right");
+        const paddingRightValue = window.getComputedStyle(container).getPropertyValue("padding-right");
 
-        container.style.setProperty('--container-margin-right',`${marginRightValue}`);
-        console.log('Updated margin-right:', marginRightValue);
-    }
+        const finalMarginRightNum = parseFloat(marginRightValue) + parseFloat(paddingRightValue);
+
+        container.style.setProperty("--container-margin-right", `-${finalMarginRightNum}px`);
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
     updateContainerMarginRight();
     window.addEventListener('resize', updateContainerMarginRight);
 
-    document.addEventListener("DOMContentLoaded", function () {
-            const tabs = document.querySelectorAll("ul.flexible-tab li");
-            const contents = document.querySelectorAll(".flexible-tab-content-wrapper");
+    document.querySelectorAll('.flexible-tab-section').forEach(section => {
+        const tabs = Array.from(section.querySelectorAll(".flexible-tab-item"));
+        const contents = section.querySelectorAll(".flexible-tab-content-wrapper");
 
-            tabs.forEach(function (tab) {
-                tab.addEventListener("click", function () {
-                    const tab_id = this.getAttribute("data-tab");
+        let currentIndex = 0;
+        let autoplayTimer;
+        let userPauseTimeout;
 
-                    tabs.forEach(t => t.classList.remove("current"));
-                    contents.forEach(c => c.classList.remove("current"));
+        // Configurable timing variables
+        const AUTOPLAY_INTERVAL = 500000000; // 5 seconds for autoplay
+        const CLICK_PAUSE_DURATION = 1000000000; // 10 seconds pause after click
 
-                    this.classList.add("current");
-                    document.getElementById(tab_id).classList.add("current");
-                });
+        function showTab(index, isClicked = false) {
+            tabs.forEach(t => {
+                t.classList.remove("current", "clicked");
+            });
+            contents.forEach(c => c.classList.remove("current"));
+            tabs[index].classList.add("current");
+            if (isClicked) {
+                tabs[index].classList.add("clicked");
+            }
+            section.querySelector(`.flexible-tab-content-wrapper[data-tab-content="${tabs[index].getAttribute("data-tab")}"]`)
+                .classList.add("current");
+        }
+
+        function startAutoplay() {
+            clearInterval(autoplayTimer);
+            autoplayTimer = setInterval(() => {
+                currentIndex = (currentIndex + 1) % tabs.length;
+                showTab(currentIndex, false); // false = autoplay
+            }, AUTOPLAY_INTERVAL);
+        }
+
+        function startResumedAutoplay() {
+            clearInterval(autoplayTimer);
+            autoplayTimer = setInterval(() => {
+                currentIndex = (currentIndex + 1) % tabs.length;
+                showTab(currentIndex, false); // false = autoplay
+            }, AUTOPLAY_INTERVAL);
+        }
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener("click", function () {
+                clearInterval(autoplayTimer);
+                clearTimeout(userPauseTimeout);
+
+                currentIndex = index;
+                showTab(index, true); // true = clicked
+
+                // Pause for configured duration, then immediately switch to next tab and resume autoplay
+                userPauseTimeout = setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % tabs.length;
+                    showTab(currentIndex, false); // false = autoplay (will show 5s animation)
+                    startResumedAutoplay();
+                }, CLICK_PAUSE_DURATION);
             });
         });
 
+        // Start autoplay initially
+        showTab(currentIndex, false); // false = autoplay
+        startAutoplay();
+
+        // Enable tab bar dragging
+        const slider = section.querySelector('.flexible-tab-wrapper');
+        if (slider) {
+            let isDown = false, startX = 0, scrollLeft = 0;
+
+            slider.addEventListener('mousedown', e => {
+                isDown = true;
+                startX = e.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            });
+
+            slider.addEventListener('mouseleave', () => isDown = false);
+            slider.addEventListener('mouseup', () => isDown = false);
+            slider.addEventListener('mousemove', e => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - slider.offsetLeft;
+                const walk = x - startX;
+                slider.scrollLeft = scrollLeft - walk;
+            });
+        }
+    });
+});
 </script>
+
+
+
 </body>
+
 </html>
