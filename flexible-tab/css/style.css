@@ -79,7 +79,7 @@ h6 {
   opacity: 0;
 }
 
-@keyframes tab-animatio {
+/* @keyframes tab-animatio {
   0% {
     width: 0%;
   }
@@ -94,6 +94,25 @@ h6 {
   100% {
     width: 100%;
   }
+} */
+.flexible-tab-play-btn {
+  position: absolute;
+  background-color: #FF5C35;
+  color: black;
+  padding: 10px;
+  z-index: 5;
+  border-radius: 50%;
+  height: 50px;
+  aspect-ratio: 1;
+  width: auto;
+  display: block;
+  right: -90px;
+  bottom: 5%;
+  background-image: url(../images/play.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:30px;
+
 }
 
 .flexible-tab-content-wrapper {
@@ -104,7 +123,7 @@ h6 {
 .flexible-tab-item.current::after {
   color: white;
   opacity: 1;
-   animation: tab-animatio 5s infinite;
+  animation: tab-animatio 5s infinite;
 }
 .flexible-tab-item.clicked::after {
   animation: tab-animatio 10s infinite;
@@ -119,6 +138,7 @@ h6 {
 }
 
 .flexible-tab-content-item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 50px;
@@ -184,23 +204,59 @@ h6 {
   height: 100%;
 }
 
-.flexible-tab-content-img video{
-border-radius: 20px;
+.flexible-tab-content-img video {
   width: 100%;
   height: 100%;
-  min-height: 0;
+  object-fit: cover;
 }
-.flexible-tab-service-icon {
-height:60px;
-width: auto;
-aspect-ratio: 1;
-  color: aliceblue;
+
+.flexible-tab-service-list {
+  color: #27272a;
+  display: flex;
+  row-gap: 30px;
+  margin-inline: -15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
 }
-.flexible-tab-service-icon svg{
-  color: aliceblue;
+
+.flexible-tab-service-wrapper {
+  padding-inline: 15px;
+  width: 50%;
+}
+
+.flexible-tab-service {
+  text-decoration: none;
   display: block;
-  width: 100%;
-  height: 100%;
+  /* margin-inline:15px ; */
+  background-color: white;
+  list-style: none;
+  padding-block: 14px 10px;
+  border-radius: 10px;
+}
+
+.flexible-tab-service-icon {
+  display: flex;
+  align-content: center;
+  background-color: #ff5c35;
+  padding: 10px;
+  margin-inline: auto;
+  width: fit-content;
+  border-radius: 50%;
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+
+.flexible-tab-service-icon svg {
+  height: 28px;
+  width: auto;
+  aspect-ratio: 1;
+  color: aliceblue;
+  display: inline-block;
+}
+
+.flexible-tab-service-title {
+  text-align: center;
+  color: #27272a;
 }
 
 @media only screen and (min-width: 1024px) {
