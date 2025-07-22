@@ -121,12 +121,9 @@ h6 {
   height: 50px;
   aspect-ratio: 1;
   width: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  bottom: 1%;
+  bottom: 12px;
+  right: 0;
   cursor: pointer;
-  font-size: 18px;
   transition: transform 0.3s ease;
   background-image: url(../images/paush.svg);
   background-size: 50%;
@@ -156,13 +153,13 @@ h6 {
 }
 
 .flexible-tab-content-item {
-  position: relative;
   display: flex;
   justify-content: space-between;
   gap: 50px;
 }
 
 .flexible-tab-content-left {
+  position: relative;
   flex-shrink: 0;
   width: 40%;
   color: white;
@@ -324,4 +321,7 @@ h6 {
   .flexible-btn-primary {
     padding: 14px;
   }
+  .flexible-tab-play-btn{
+    bottom: -40px;
+ }
 }
