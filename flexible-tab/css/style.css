@@ -17,10 +17,11 @@
 }
 
 .flexible-tab-section {
+  margin-bottom: 100px;
   background-color: #27272a;
 }
 
-.container {
+.flexible-tab-container {
   max-width: 1230px;
   width: 100%;
   padding-inline: 20px;
@@ -80,17 +81,59 @@ h6 {
   transition: width 0.3s ease;
 }
 
+.flexible-tab-item svg path {
+  stroke-dashoffset: 0;
+  animation: svg-line-progress 5s linear forwards;
+}
+.flexible-tab-item svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.flexible-tab-item rect {
+  fill: none;
+  stroke: red;
+  height: 95%;
+  stroke-width: 3;
+  stroke-dasharray: 467.749;
+  stroke-dashoffset: 467.749;
+  transition: stroke-dashoffset 0.5s linear;
+  
+}
+
+@keyframes dashLoop {
+  0% {
+    stroke-dashoffset: 467.749;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 .flexible-tab-item.current {
   color: white;
 }
-
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current svg{
+  opacity: 1;
+}
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current::after{
+display: none;
+}
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current  rect{ 
+ animation: dashLoop 5s linear infinite;
+}
 .flexible-tab-item.current::after {
   opacity: 1;
   animation: tab-progress 5s linear forwards;
 }
 
 .flexible-tab-item.clicked::after {
-  animation: tab-progress 10s linear forwards;
+  animation: tab-progress 5s linear forwards;
 }
 
 .flexible-tab-item.paused::after {
@@ -122,7 +165,7 @@ h6 {
   aspect-ratio: 1;
   width: auto;
   bottom: 12px;
-  right: 0;
+  left: 0;
   cursor: pointer;
   transition: transform 0.3s ease;
   background-image: url(../images/paush.svg);
@@ -132,7 +175,7 @@ h6 {
 }
 
 .flexible-tab-play-btn.stop-current {
-    background-image: url(../images/play.svg);
+  background-image: url(../images/play.svg);
 }
 
 .flexible-tab-play-btn:hover {
@@ -202,7 +245,13 @@ h6 {
 
 .flexible-tab-content-img {
   height: 100%;
-  margin-right: var(--container-margin-right, 0);
+  margin-right: var(--container-margin-right);
+}
+
+.flexible-tab-content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .flexible-tab-content-img video {
@@ -259,7 +308,33 @@ h6 {
   text-align: center;
   color: #27272a;
 }
-
+.flexible-tab-section.flexible-tab-v2 {
+  padding: 100px 0;
+}
+.flexible-tab-section.flexible-tab-v2 .flexible-tab {
+  gap: 20px;
+  border-bottom: none;
+}
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item:not(:last-child) {
+  border: 1px solid #ffffff26;
+}
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item {
+  border-radius: 50px;
+  overflow: hidden;
+}
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item::after {
+  border-radius: 50px;
+}
+.flexible-tab-timeline {
+  top: 0;
+  /* position: absolute; */
+}
+/* .flexible-tab-timeline svg{
+  height: 20px;
+} */
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item:last-child {
+  border: 1px solid #ffffff26;
+}
 @media only screen and (max-width: 1280px) {
   .flexible-tab-title {
     font-size: 34px;
@@ -273,7 +348,6 @@ h6 {
 
   .flexible-tab-content-left {
     width: 50%;
-    padding-bottom: 60px;
   }
 
   .flexible-tab-content-item {
@@ -307,7 +381,6 @@ h6 {
 
   .flexible-tab-content-left {
     width: 100%;
-    padding-bottom: 0;
   }
 
   .flexible-tab-content-right {
@@ -321,7 +394,4 @@ h6 {
   .flexible-btn-primary {
     padding: 14px;
   }
-  .flexible-tab-play-btn{
-    bottom: -40px;
- }
 }
