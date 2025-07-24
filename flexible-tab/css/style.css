@@ -140,6 +140,10 @@ display: none;
   animation-play-state: paused;
 }
 
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.paused  rect{
+  animation-play-state: paused;
+}
+
 .flexible-tab-item.stopped::after {
   animation: none;
   width: 0%;
