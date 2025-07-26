@@ -98,7 +98,8 @@ h6 {
 .flexible-tab-item rect {
   fill: none;
   stroke: red;
-  height: 95%;
+  height: 100%;
+  width: 100%;
   stroke-width: 3;
   stroke-dasharray: 467.749;
   stroke-dashoffset: 467.749;
@@ -124,8 +125,8 @@ h6 {
 .flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current::after{
 display: none;
 }
-.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current  rect{ 
- animation: dashLoop 5s linear infinite;
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current  rect{
+ animation: dashLoop 5s linear forwards;
 }
 .flexible-tab-item.current::after {
   opacity: 1;
