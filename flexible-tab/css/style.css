@@ -22,7 +22,7 @@
 }
 
 .flexible-tab-container {
-  max-width: 1230px;
+  max-width: 1320px;
   width: 100%;
   padding-inline: 20px;
   margin-inline: auto;
@@ -59,6 +59,7 @@ h6 {
 }
 
 .flexible-tab-item {
+  flex-shrink: 0;
   transition: all 0.5s ease-in-out;
   user-select: none;
   min-width: 230px;
@@ -97,14 +98,14 @@ h6 {
 
 .flexible-tab-item rect {
   fill: none;
+  display: block;
   stroke: red;
-  height: 100%;
-  width: 100%;
+  height: 96%;
+  width: 109%;
   stroke-width: 3;
-  stroke-dasharray: 467.749;
+  stroke-dasharray: 517.749;
   stroke-dashoffset: 467.749;
   transition: stroke-dashoffset 0.5s linear;
-  
 }
 
 @keyframes dashLoop {
@@ -119,14 +120,14 @@ h6 {
 .flexible-tab-item.current {
   color: white;
 }
-.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current svg{
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current svg {
   opacity: 1;
 }
-.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current::after{
-display: none;
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current::after {
+  display: none;
 }
-.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current  rect{
- animation: dashLoop 5s linear forwards;
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.current rect {
+  animation: dashLoop 5s linear forwards;
 }
 .flexible-tab-item.current::after {
   opacity: 1;
@@ -141,7 +142,7 @@ display: none;
   animation-play-state: paused;
 }
 
-.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.paused  rect{
+.flexible-tab-section.flexible-tab-v2 .flexible-tab-item.paused rect {
   animation-play-state: paused;
 }
 
@@ -254,9 +255,12 @@ display: none;
 }
 
 .flexible-tab-content-img img {
+  display: block;
+  object-fit: cover;
+  object-position: left;
+  min-height: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .flexible-tab-content-img video {
@@ -339,6 +343,27 @@ display: none;
 } */
 .flexible-tab-section.flexible-tab-v2 .flexible-tab-item:last-child {
   border: 1px solid #ffffff26;
+}
+
+.flexible-tab-section.flexible-tab-horizontal .flexible-tab-container {
+  display: flex;
+  gap: 30px;
+}
+.flexible-tab-section.flexible-tab-horizontal .flexible-tab-wrapper {
+  overflow: scroll;
+}
+.flexible-tab-section.flexible-tab-horizontal .flexible-tab {
+  flex-direction: column;
+}
+.flexible-tab-section.flexible-tab-horizontal .flexible-tab-item {
+  flex-shrink: 0;
+}
+.flexible-tab-section.flexible-tab-horizontal .flexible-tab-wrapper {
+  width: fit-content;
+  padding-top:20px ;
+  max-height: 600px;
+  gap: 20px;
+  flex-shrink: 0;
 }
 @media only screen and (max-width: 1280px) {
   .flexible-tab-title {
