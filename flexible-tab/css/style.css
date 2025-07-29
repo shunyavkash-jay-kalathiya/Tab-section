@@ -465,6 +465,7 @@ h6 {
 
   .flexible-tab-content-left {
     width: 100%;
+    padding-bottom: 0;
   }
 
   .flexible-tab-content-right {
