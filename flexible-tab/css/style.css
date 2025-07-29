@@ -18,6 +18,7 @@
 
 .flexible-tab-section {
   margin-bottom: 100px;
+  width: 100%;
   background-color: #27272a;
 }
 
@@ -212,6 +213,7 @@ h6 {
 .flexible-tab-content-wrapper {
   display: none;
   padding-top: 100px;
+  width: 100%;
 }
 
 .flexible-tab-content-wrapper.current {
