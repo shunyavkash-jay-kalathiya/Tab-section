@@ -344,27 +344,28 @@ h6 {
 .flexible-tab-section.flexible-tab-v2 {
   padding: 100px 0;
 }
+
 .flexible-tab-section.flexible-tab-v2 .flexible-tab {
   gap: 20px;
   border-bottom: none;
 }
+
 .flexible-tab-section.flexible-tab-v2 .flexible-tab-item:not(:last-child) {
   border: 1px solid #ffffff26;
 }
+
 .flexible-tab-section.flexible-tab-v2 .flexible-tab-item {
   border-radius: 50px;
   overflow: hidden;
 }
+
 .flexible-tab-section.flexible-tab-v2 .flexible-tab-item::after {
   border-radius: 50px;
 }
 .flexible-tab-timeline {
   top: 0;
-  /* position: absolute; */
 }
-/* .flexible-tab-timeline svg{
-  height: 20px;
-} */
+
 .flexible-tab-section.flexible-tab-v2 .flexible-tab-item:last-child {
   border: 1px solid #ffffff26;
 }
