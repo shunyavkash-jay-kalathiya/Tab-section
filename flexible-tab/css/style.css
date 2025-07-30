@@ -53,8 +53,11 @@ h6 {
   gap: 0px;
   width: 100%;
   display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
   justify-content: center;
   min-width: fit-content;
+  width: max-content;
   border-bottom: 1px solid #ffffff26;
 }
 
@@ -76,14 +79,14 @@ h6 {
   bottom: 0px;
   left: 0;
   opacity: 1;
-   fill: none;
+  fill: none;
   stroke-opacity: 1;
   height: 6%;
   transition: stroke-dashoffset 0.5s linear;
   animation: dashLoop 5s linear forwards;
 }
 
- @keyframes tab-progress {
+@keyframes tab-progress {
   0% {
     width: 0%;
   }
@@ -372,7 +375,7 @@ h6 {
   overflow: hidden;
 }
 /* .flexible-tab-pro-section.flexible-tab-pro-v2 .flexible-tab-pro-item::after {
-  border-radius: 50px;
+border-radius: 50px;
 } */
 .flexible-tab-pro-timeline {
   top: 0;
