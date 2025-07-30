@@ -39,6 +39,14 @@ h6 {
   font-family: "Geist";
 }
 
+.flexible-tab-pro-wrapper {
+  display: flex;
+  overflow-x: auto;
+  width: 100%;
+  scrollbar-width: none;
+  transition: all 0.5s ease-in-out;
+}
+
 .flexible-tab-pro {
   transition: all 0.5s ease-in-out;
   list-style: none;
@@ -48,14 +56,6 @@ h6 {
   justify-content: center;
   min-width: fit-content;
   border-bottom: 1px solid #ffffff26;
-}
-
-.flexible-tab-pro-wrapper {
-  display: flex;
-  overflow-x: auto;
-  width: 100%;
-  scrollbar-width: none;
-  transition: all 0.5s ease-in-out;
 }
 
 .flexible-tab-pro-item {
@@ -71,19 +71,12 @@ h6 {
 }
 
 .flexible-tab-pro-progress {
-
   background-color: rgb(21, 255, 0);
   position: absolute;
   bottom: 0px;
   left: 0;
   opacity: 1;
    fill: none;
-  stroke-width: 3;
-  stroke-dasharray: 517.749;
-  stroke-dashoffset: 517.749;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 1.9;
   stroke-opacity: 1;
   height: 6%;
   transition: stroke-dashoffset 0.5s linear;
@@ -109,7 +102,7 @@ h6 {
   opacity: 1;
 }
 
-.flexible-tab-pro-item .flexible-tab-pro-progress-v2 rect ,.flexible-tab-pro-item .flexible-tab-pro-progress-v2 rect {
+.flexible-tab-pro-item .flexible-tab-pro-progress-v2 rect {
   fill: none;
   stroke: red;
   stroke-width: 3;
@@ -122,19 +115,6 @@ h6 {
   width: 99%;
   height: 97%;
   transition: stroke-dashoffset 0.5s linear;
-  /* fill: none;
-  display: block;
-  stroke: red;
-  height: 96%;
-  width: 109%;
-  stroke-width: 3;
-  stroke-dasharray: 517.749;
-  stroke-dashoffset: 467.749;
-   stroke-linecap: round;
-   stroke-linejoin: round;
-     stroke-miterlimit: 1.9;
-      stroke-opacity: 1;
-  transition: stroke-dashoffset 0.5s linear; */
 }
 
 @keyframes dashLoop {
@@ -155,16 +135,19 @@ h6 {
   .flexible-tab-pro-progress-v2 {
   opacity: 1;
 }
+
 .flexible-tab-pro-section.flexible-tab-pro-v2
   .flexible-tab-pro-item.current::after {
   display: none;
 }
+
 .flexible-tab-pro-section.flexible-tab-pro-v2
   .flexible-tab-pro-item.current
   .flexible-tab-pro-progress-v2
   rect {
   animation: dashLoop 5s linear forwards;
 }
+
 .flexible-tab-pro-item.current .flexible-tab-pro-progress {
   opacity: 1;
   animation: tab-progress 5s linear forwards;
