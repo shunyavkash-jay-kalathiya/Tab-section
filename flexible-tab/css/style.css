@@ -51,7 +51,6 @@ h6 {
   transition: all 0.5s ease-in-out;
   list-style: none;
   gap: 0px;
-  width: 100%;
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;
@@ -71,28 +70,31 @@ h6 {
   text-align: center;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 
 .flexible-tab-pro-progress {
-  background-color: rgb(21, 255, 0);
   position: absolute;
   bottom: 0px;
   left: 0;
-  opacity: 1;
+  opacity: 0;
   fill: none;
   stroke-opacity: 1;
   height: 6%;
-  transition: stroke-dashoffset 0.5s linear;
-  animation: dashLoop 5s linear forwards;
+  transition:transform 0.5s ease-in-out;
+  width: 130%;
+  transform:translateX(0%);
+background-color: #ff5c35;
+
 }
 
 @keyframes tab-progress {
-  0% {
-    width: 0%;
+  0%{
+transform: translateX(-100%);
   }
-  100% {
-    width: 100%;
-  }
+  100%{
+      transform: translateX(0%);
+    }
 }
 
 .flexible-tab-pro-item .flexible-tab-pro-progress-v2 {
@@ -157,6 +159,7 @@ h6 {
 }
 
 .flexible-tab-pro-item.clicked .flexible-tab-pro-progress {
+    opacity: 1;
   animation: tab-progress 5s linear forwards;
 }
 
